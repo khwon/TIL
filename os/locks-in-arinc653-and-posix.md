@@ -31,6 +31,6 @@
 * ARINC653에서는 waiting threads중에 하나만 깨울수 있는 방법이 없음. 무조건 broadcast이고 하나만 signal은 불가능.
 * posix condvar는 auto-reset. ARINC653 event는 직접 api로 reset을 해줘야함.
 
-더불어 [http://stackoverflow.com/questions/178114/pthread-like-windows-manual-reset-event]를 보면 pthread condvar를
+더불어 [여기](http://stackoverflow.com/questions/178114/pthread-like-windows-manual-reset-event)를 보면 pthread condvar를
 이용해서 event를 구현한 여러 방법이 있긴 한데, 개인적인 생각으로는 semaphore 구현을 건드릴수 있는 나같은 상황이라면
 오히려 value가 inf or 0을 가지는 semaphore를 이용해서 event를 구현하는게 쉽지 않을까 싶긴 한데 고민해볼 문제다.
